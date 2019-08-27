@@ -1,0 +1,73 @@
+.home-bg
+	background: url("../images/home-slide-1.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	// height: 100vh
+
+.yt-video
+	width: 100%
+	height: auto
+
+// What can we do section
+.info-box
+	background: $bg-lemon-green
+	.title-box
+		margin-top: 70px
+
+
+
+// Seaon Grid
+.new-in-season
+	background-color: $bg-lemon-green
+	padding-bottom: 80px
+.season-grid
+	display: grid
+	grid-template-columns: repeat(4, 270px)
+	grid-template-rows: repeat(2, 309px)
+	grid-gap: 30px
+	grid-template-areas: "product-1 product-1 product-2 product-3" "product-1 product-1 product-4 product-5"
+	div[class^="prod-"]
+		figure
+			position: relative
+			figcaption
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 10px
+				background-color: rgba($bg-lemon-green, 0.7)
+				span
+					display: inline-block
+					vertical-align: middle
+				.product-title
+					+font-stack($medium, $base, $font-bold)
+					text-transform: uppercase
+					
+
+
+
+.prod-1
+	grid-area: product-1
+	grid-row: 1 / span 2
+.prod-2
+	grid-area: product-2
+.prod-3
+	grid-area: product-3
+.prod-4
+	grid-area: product-4
+.prod-5
+	grid-area: product-5		
+
+// Good life box1
+.good-life-box
+	background: url("../images/good-life-bg.jpg")
+	background-size: cover
+	background-positino: top center
+	padding-bottom: 70px
+	.wrapper
+		+flex-parent($flex-row, $flex-end)
+
+
+
+

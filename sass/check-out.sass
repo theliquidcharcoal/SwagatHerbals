@@ -1,0 +1,60 @@
+.inventory-list
+	border: 1px dashed $lemon-green
+	padding: 30px
+	border-radius: 5px
+	.item-seperator
+		border-bottom: 1px solid rgba($base, 0.2)
+	.invoice-summary
+		ul
+			list-style: none
+			padding: 0
+			li
+				+flex-parent($flex-row, $space-between)
+				margin-bottom: 20px
+				// padding: 0px 10px
+				span
+					display: inline-block
+					&.item-purchased
+
+						ul
+							+flex-parent($flex-row, $flex-start)
+							li.product-counts
+								margin-left: 20px
+								&:before
+									content: "X"
+									margin-right: 20px
+					&.item-total
+						margin-bottom: 20px
+					ul
+						li
+							padding: 0 10px
+
+		ul.purchase-total, ul.purchase-subtotal
+			+flex-parent($flex-row, $flex-start)
+			padding: 10px
+			.total, .amount
+				display: inline-block
+				margin: 0
+			.total:after
+				content: ":"
+			.amount
+				margin-left: 30px
+				color: $lemon-green
+	.payment-mode
+		border: 1px solid rgba($base, 0.2)
+		border-radius: 5px
+		input
+			min-height: auto
+		ul
+			padding: 0
+			list-style: none
+			li
+				padding: 20px
+				&:not(:last-child)
+					border-bottom: 1px solid rgba($base, 0.2)
+	.submit-button
+		button
+			border: none
+			width: 100%
+			border-radius: 3px
+			padding: 15px 0px

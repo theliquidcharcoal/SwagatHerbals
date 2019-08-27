@@ -1,0 +1,123 @@
+div.main-nav
+	background-color: #fff
+	border-bottom: 4px $lemon-green solid
+	position: fixed
+	width: 100%
+// .nav-bar
+// 	display: flex
+// 	justify-content: space-between
+// 	// background-color: #ddd
+// 	align-items: center
+// 	padding: 1rem 0
+	&.navbar-inverse
+		border-bottom: none
+		
+.nav-bar
+	+flex-parent($flex-row, $space-between)
+
+.logo
+	flex-grow: 1
+	img
+		width: 10rem
+		height: auto
+		display: inline-block
+		vertical-align: middle
+.nav
+	flex-grow: 2
+	ul
+		display: flex
+		justify-content: space-between
+		list-style-type:  none
+		padding: 0
+		li
+			list-style: none
+			a
+				@include link($all-caps, $base)
+				&.active
+					+link($all-caps, $lemon-green)
+
+.navbar-inverse.main-nav
+	background: transparent
+	
+	.nav
+		ul
+			li
+				a
+					+link($all-caps, #fff)
+					transition: all 0.2s ease-in-out
+					&.active
+						+link($all-caps, $lemon-green)
+
+					&:hover
+						+link($all-caps, $lemon-green)
+						font-size: $medium
+	.right-nav
+		ul
+			li
+				a
+					+link($all-caps, #fff)
+
+
+// .target
+// 	position: absolute
+// 	border-bottom: 4px solid transparent
+// 	z-index: -1
+// 	transform: translateX(-60px)
+
+// .nav a, .target
+// 	transition: all .40s ease-in-out
+
+
+.right-nav
+	flex-grow: 1
+	ul
+		display: flex
+		justify-content: flex-end
+		li
+			list-style: none
+			margin-right: 2rem
+			a
+				@include link($all-caps, $base)
+			.search-icon-chk
+				&:hover
+					cursor: pointer
+			#search-icon-chk
+				display: none
+			
+
+
+
+
+
+.search-box
+	position: relative
+	background: $bg-lemon-green
+	#search-box-input
+		opacity: 0
+		width: 100%
+		background: #ffffff4d
+		border: none
+		border-bottom-width: medium
+		border-bottom-style: none
+		border-bottom-color: currentcolor
+		border-bottom: 2px solid black
+		position: absolute
+		height: 50px
+		text-align: center
+		z-index: 999
+			
+			
+.cart-link
+	position: relative
+	.item-counter-badge
+		position: absolute
+		min-width: 1rem
+		min-height: 1rem
+		background: $dark-green
+		border-radius: 50%
+		font-size: 0.8rem
+		color: #fff
+		top: -0.7rem
+		text-align: center
+		line-height: 1.4rem
+		padding: 1px 3px

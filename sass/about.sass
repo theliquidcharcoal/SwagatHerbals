@@ -1,0 +1,22 @@
+.about-us
+	.page-title
+		background: url("../images/about-page-title.jpg")
+		background-position: bottom center
+		background-size: cover
+		background-repeat: no-repeat
+
+	.about-us-main
+		grid-template-columns: 1fr 1fr
+		grid-gap: 50px
+		padding-bottom: 70px
+		.author-letter
+			h1
+				+font-stack($extra, $base, $font-normal, $font-fam-courge)
+			.author-sign
+				margin-top: 20px
+				h2
+					+font-stack($default-font-size, $lemon-green, $font-normal, $font-fam-courge)
+				h2, h4
+					margin: 0
+					margin-bottom: 5px
+

@@ -1,0 +1,65 @@
+.coming_soon_page
+	 background: lightblue url("../images/coming_soon_bg.jpg") no-repeat fixed center center
+	 background-size: cover
+	 height: 100%
+
+
+.coming_soon_main
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	// position: relative
+	// top: 20%
+	// height: calc(100% - 90px)
+	color: #fff
+	.coming_soon_content
+		margin-top: 5rem
+		align-self: center
+		h1
+			color: $lemon-green
+		h3
+			+font-stack()
+		h4
+			+font-stack($small, $font-normal)
+.launch_counter
+	list-style: none
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	padding: 0
+	li
+		min-width: 4rem
+		min-height: 4rem
+		border: 2px solid #fff
+		border-radius: 50%
+		color: #fff
+		margin-right: 15px
+		padding: 0
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		span
+			display: block
+			text-align: center
+			&.counter_number
+				+font-stack($large)
+			&.counter_text
+				+font-stack($small)
+#subscribe_form
+	+flex-parent($flex-row, $flex-start, $flex-stretch, $flex-stretch)
+	#subscribe_email
+		+flex-child(2)
+		color: $dark-grey
+		+box_shadow($bs-offset-x: 0px, $bs-offset-y: 0px, $bs-blur-rad: 5px, $bs-spread-rad: 1px, $bs-color: $lemon-green)
+	#subscribe_btn
+		padding: 0 3rem
+		background: $lemon-green
+		color: $dark-grey
+
+
+
+
+
+		

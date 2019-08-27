@@ -1,0 +1,58 @@
+.products-page
+	.page-title
+		background: url("../images/about-page-title.jpg")
+		background-position: bottom center
+		background-size: cover
+		background-repeat: no-repeat
+
+// Single Product
+
+.single-product-body
+	
+	.main-image
+		width: 100%
+		+flex_parent($flex-column, $flex-center, $flex-start)
+		// border: 2px solid $light-yellow
+	.thumb-images
+		+flex_parent($flex-row, $flex-center, $flex-center, $flex-center, $no-wrap)
+		margin: 15px 0px
+		img
+			// border: 2px solid $light-yellow
+			&:not(:last-child)
+				margin-right: 15px
+			&.active
+				+box_shadow(0, 0, 1px, 2px, $lemon-green)
+	.product-information
+		padding: 70px 0
+		.product-ratings
+			ul
+				list-style: none
+				padding: 0
+				+flex_parent($flex-row, $flex-start, $flex-center, $flex-center)
+				li
+					margin-right: 3px
+					i.fas
+						color: $lemon-green
+					&.review-counts
+						margin-left: 10px
+	.purchase-section
+		ul
+			list-style: none
+			padding: 0
+			+flex_parent($flex-row, $flex-start, $flex-center, $flex-center)
+			.add-renove-product
+				margin-right: 30px
+				background-color: $light-yellow
+				padding: 0.2rem
+				display: inline-block
+				min-height: 30px
+				span
+					display: inline-block
+					vertical-align: middle
+					margin-right: 15px
+					&:first-child
+						margin-left: 15px
+				.icon_minus_alt2, .icon_plus_alt2
+					&:hover
+						cursor: pointer
+
